@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown, Button } from 'react-bootstrap';
 import './App.css';
 
 function App() {
@@ -24,6 +24,33 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      <div className="background">
+        <h3>20% Season Off</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <Button variant="primary">Learn more</Button>
+      </div>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4">
+            <img src="https://codingapple1.github.io/shop/shoes1.jpg" alt="img_1" width="100%"/>
+            <h4>상품명</h4>
+            <p>가격</p>
+          </div>
+          <div className="col-md-4">
+          <img src="https://codingapple1.github.io/shop/shoes2.jpg" alt="img_2" width="100%"/>
+            <h4>상품명</h4>
+            <p>가격</p>
+          </div>
+          <div className="col-md-4">
+          <img src="https://codingapple1.github.io/shop/shoes3.jpg" alt="img_3" width="100%"/>
+            <h4>상품명</h4>
+            <p>가격</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
