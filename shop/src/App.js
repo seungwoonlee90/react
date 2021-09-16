@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navbar, Container, Nav, NavDropdown, Button } from 'react-bootstrap';
 import './App.css';
 import Data from './data.js'
+import Card from './components/Card.js'
 
 function App() {
 
@@ -48,17 +49,6 @@ function App() {
 
     </div>
   );
-}
-
-function Card(props) {
-  return(
-    <div className="col-md-4">
-      <img src={"https://codingapple1.github.io/shop/shoes" + (props.id + 1)+ ".jpg"} alt="img_1" width="100%"/>
-      <h4> { props.shoe.title } </h4>
-      <p> { props.shoe.content } </p>
-      <p> { props.shoe.price } </p>
-    </div>
-  )
 }
 
 
