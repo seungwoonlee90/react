@@ -5,7 +5,7 @@ import Data from './data.js'
 
 function App() {
 
-  let [shoes, shoesEdit] = useState([Data])
+  let [shoes, shoesEdit] = useState(Data)
   console.log(shoesEdit);
   
   return (
@@ -38,26 +38,28 @@ function App() {
 
       <div className="container">
         <div className="row">
-          <div className="col-md-4">
-            <img src="https://codingapple1.github.io/shop/shoes1.jpg" alt="img_1" width="100%"/>
-            <h4> { shoes[0].title } </h4>
-            <p>가격</p>
-          </div>
-          <div className="col-md-4">
-          <img src="https://codingapple1.github.io/shop/shoes2.jpg" alt="img_2" width="100%"/>
-            <h4>상품명</h4>
-            <p>가격</p>
-          </div>
-          <div className="col-md-4">
-          <img src="https://codingapple1.github.io/shop/shoes3.jpg" alt="img_3" width="100%"/>
-            <h4>상품명</h4>
-            <p>가격</p>
-          </div>
+          {
+            shoes.map((shoe, i) => {
+              return <Card shoe={shoes[i]} id={i} key={i}/>
+            })
+          }
         </div>
       </div>
 
     </div>
   );
 }
+
+function Card(props) {
+  return(
+    <div className="col-md-4">
+      <img src={"https://codingapple1.github.io/shop/shoes" + (props.id + 1)+ ".jpg"} alt="img_1" width="100%"/>
+      <h4> { props.shoe.title } </h4>
+      <p> { props.shoe.content } </p>
+      <p> { props.shoe.price } </p>
+    </div>
+  )
+}
+
 
 export default App;

@@ -20,5 +20,4 @@ const Data = [
       price : 130000
     }
 ]
-
 export default Data;
