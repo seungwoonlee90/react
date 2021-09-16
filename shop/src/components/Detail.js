@@ -1,11 +1,11 @@
 import React from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import '../Detail.scss';
 
 function Detail(props) {
 
     let history = useHistory();
     let { id } = useParams();
-
     return (
         <div className="container">
           <div className="row">

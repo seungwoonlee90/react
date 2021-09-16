@@ -1,0 +1,9 @@
+@import './reset.scss';
+
+$mainColor: #ff0000;
+
+div.container {
+    p {
+        color: $mainColor;
+    }
+}
