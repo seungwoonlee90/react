@@ -1,12 +1,8 @@
-import React,  { useState }  from 'react';
+import React from 'react';
 import { Button } from 'react-bootstrap';
 import Card from './Card.js';
-import Data from '../data.js'
 
-function Home() {
-    let [shoes, shoesEdit] = useState(Data)
-    console.log(shoesEdit);
-
+function Home(props) {
     return(
         <>
         <div className="background">
@@ -18,8 +14,8 @@ function Home() {
           <div className="container">
             <div className="row">
               {
-                shoes.map((shoe, i) => {
-                  return <Card shoe={shoes[i]} id={i} key={i}/>
+                props.shoes.map((shoe, i) => {
+                  return <Card shoe={props.shoes[i]} id={i} key={i}/>
                 })
               }
             </div>
