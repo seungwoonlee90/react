@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/">
           <Home shoes={shoes}/>
         </Route>
-        <Route path="/detail">
+        <Route path="/detail/:id">
           <Detail shoes={shoes} />
         </Route>
         <Route path="/:id">
