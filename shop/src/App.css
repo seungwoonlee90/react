@@ -10,7 +10,7 @@
 .background {
   background : url('./background.jpeg');
   height: 50vh;
-  padding: 50px;
+  padding: 20vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
