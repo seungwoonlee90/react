@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import '../Detail.scss';
 
@@ -6,14 +6,27 @@ function Detail(props) {
 
     useEffect(()=>{
       setTimeout(()=>{
-        console.log('hi')
+        alertEdit(false)
       }, 2000)
     });
+
+    let [alert, alertEdit] = useState(true);
 
     let history = useHistory();
     let { id } = useParams();
     return (
         <div className="container">
+
+          {
+            alert
+            ?(
+              <div className="my-alert">
+                <p>재고가 부족합니다 !</p>
+              </div>
+            )
+            : null
+          }
+
           <div className="row">
             <div className="col-md-6">
               <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="100%" alt="detail_shoe_1" />
