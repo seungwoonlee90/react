@@ -3,14 +3,13 @@ import { useHistory, useParams } from 'react-router-dom';
 import '../Detail.scss';
 
 function Detail(props) {
-
+    let [alert, alertEdit] = useState(true);
+    
     useEffect(()=>{
       setTimeout(()=>{
         alertEdit(false)
       }, 2000)
-    });
-
-    let [alert, alertEdit] = useState(true);
+    }, [alert]);
 
     let history = useHistory();
     let { id } = useParams();
