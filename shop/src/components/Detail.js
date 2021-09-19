@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import '../Detail.scss';
 
 function Detail(props) {
+
+    useEffect(()=>{
+      setTimeout(()=>{
+        console.log('hi')
+      }, 2000)
+    });
 
     let history = useHistory();
     let { id } = useParams();
