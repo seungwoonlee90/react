@@ -4,12 +4,13 @@ import '../Detail.scss';
 
 function Detail(props) {
     let [alert, alertEdit] = useState(true);
-    
+
     useEffect(()=>{
-      setTimeout(()=>{
+      let timer = setTimeout(()=>{
         alertEdit(false)
-      }, 2000)
-    }, [alert]);
+      }, 2000);
+      return ()=>{ clearTimeout(timer)}
+    }, []);
 
     let history = useHistory();
     let { id } = useParams();
