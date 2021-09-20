@@ -37,10 +37,17 @@ function Detail(props) {
               <p>{props.shoes[id].price}</p>
               <button className="btn btn-danger">주문하기</button>
               <button className="btn btn-danger" onClick={()=>{history.goBack();}}>뒤로가기</button>
+              <Info last={props.last} />
             </div>
           </div>
         </div> 
     )
+}
+
+function Info(props) {
+  return (
+    <p>{props.last[0]}</p>
+  )
 }
 
 export default Detail;

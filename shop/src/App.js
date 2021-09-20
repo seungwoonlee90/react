@@ -9,7 +9,8 @@ import axios from 'axios';
 
 function App() {  
   let [shoes, shoesEdit] = useState(Data)
-  console.log(shoesEdit);
+  let [last, lastEdit] = useState([10, 11, 12])
+  console.log(lastEdit)
 
   return (
     <div className="App">
@@ -28,7 +29,7 @@ function App() {
             }}>더보기</button>
         </Route>
         <Route path="/detail/:id">
-          <Detail shoes={shoes} />
+          <Detail shoes={shoes} last={last}/>
         </Route>
         <Route path="/:id">
           <div>아무거나 적었을때</div>
