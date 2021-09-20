@@ -5,6 +5,7 @@ import Detail from './components/Detail.js';
 import Navigation from './components/Navigation.js';
 import Home from './components/Home.js'
 import { Route, Switch } from 'react-router-dom';
+import axios from 'axios';
 
 function App() {  
   let [shoes, shoesEdit] = useState(Data)
@@ -16,6 +17,15 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home shoes={shoes}/>
+          <button className="btn btn-primary" onClick={()=>{
+              axios.get('https://codingapple1.github.io/shop/data2.json')
+              .then((result)=>{
+                shoesEdit([...shoes, ...result.data])
+              })
+              .catch(()=>{
+                console.log('실패!')
+              })
+            }}>더보기</button>
         </Route>
         <Route path="/detail/:id">
           <Detail shoes={shoes} />

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import Card from './Card.js';
-import axios from 'axios';
 
 function Home(props) {
     return(
@@ -20,15 +19,6 @@ function Home(props) {
                 })
               }
             </div>
-            <button className="btn btn-primary" onClick={()=>{
-              axios.get('https://codingapple1.github.io/shop/data2.json')
-              .then((result)=>{
-                console.log(result.data)
-              })
-              .catch(()=>{
-                console.log('실패!')
-              })
-            }}>더보기</button>
         </div>
         </>
     )
