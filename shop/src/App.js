@@ -6,6 +6,7 @@ import Navigation from './components/Navigation.js';
 import Home from './components/Home.js'
 import { Route, Switch } from 'react-router-dom';
 import axios from 'axios';
+import Cart from './components/Cart.js'
 
 function App() {  
   let [shoes, shoesEdit] = useState(Data)
@@ -31,8 +32,8 @@ function App() {
         <Route path="/detail/:id">
           <Detail shoes={shoes} last={last}/>
         </Route>
-        <Route path="/:id">
-          <div>아무거나 적었을때</div>
+        <Route path="/cart">
+          <Cart/>
         </Route>
       </Switch>
     </div>
