@@ -18,6 +18,7 @@ function Home(props) {
                   return <Card shoe={props.shoes[i]} id={i} key={i}/>
                 })
               }
+
             </div>
         </div>
         </>

@@ -19,14 +19,14 @@ function App() {
         <Route exact path="/">
           <Home shoes={shoes}/>
           <button className="btn btn-primary" onClick={()=>{
-              axios.get('https://codingapple1.github.io/shop/data2.json')
-              .then((result)=>{
-                shoesEdit([...shoes, ...result.data])
-              })
-              .catch(()=>{
-                console.log('실패!')
-              })
-            }}>더보기</button>
+            axios.get('https://codingapple1.github.io/shop/data2.json')
+            .then((result)=>{
+              shoesEdit([...shoes, ...result.data])
+            })
+            .catch(()=>{
+              console.log('실패!')
+            })
+          }}>더보기</button>
         </Route>
         <Route path="/detail/:id">
           <Detail shoes={shoes} last={last}/>
